@@ -1,0 +1,5 @@
+{
+    "domain": "https://taitajajaakko.azurewebsites.net/api/",
+    "login": "login",
+    "checkToken": "checktoken"
+}

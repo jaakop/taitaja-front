@@ -1,0 +1,182 @@
+{
+    "PcAmount": 25,
+    "MacAmount": 19,
+    "ChromeAmount": 12,
+    "PcUsage":0.03,
+    "MacUsage":0.03,
+    "ChromeUsage":0.01,
+    "Rooms":{
+        "NormalSetup":[
+            {
+                "RoomNumber":11,
+                "ComputerType":"PC",
+                "Amount": 5,
+                "Abitti": true
+            },
+            {
+                "RoomNumber":12,
+                "ComputerType":"Mac",
+                "Amount": 7,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":13,
+                "ComputerType":"Chrome",
+                "Amount": 4,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":14,
+                "ComputerType":"PC",
+                "Amount": 3,
+                "Abitti": true
+            },
+            {
+                "RoomNumber":15,
+                "ComputerType":"PC",
+                "Amount": 2,
+                "Abitti": true
+            },
+            {
+                "RoomNumber":16,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":17,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":18,
+                "ComputerType":"Chrome",
+                "Amount": 4,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":23,
+                "ComputerType":"PC",
+                "Amount": 5,
+                "Abitti": true
+            },
+            {
+                "RoomNumber":24,
+                "ComputerType":"Chrome",
+                "Amount": 4,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":25,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":26,
+                "ComputerType":"PC",
+                "Amount": 5,
+                "Abitti": true
+            },
+            {
+                "RoomNumber":27,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":28,
+                "ComputerType":"PC",
+                "Amount": 5,
+                "Abitti": true
+            }
+        ],
+        "AiSetup":[
+            {
+                "RoomNumber":11,
+                "ComputerType":"Chrome",
+                "Amount": 2,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":12,
+                "ComputerType":"Mac",
+                "Amount": 4,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":13,
+                "ComputerType":"Chrome",
+                "Amount": 2,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":14,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":15,
+                "ComputerType":"PC",
+                "Amount": 20,
+                "Abitti": true
+            },
+            {
+                "RoomNumber":16,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":17,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":18,
+                "ComputerType":"Chrome",
+                "Amount": 2,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":23,
+                "ComputerType":"Chrome",
+                "Amount": 2,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":24,
+                "ComputerType":"Chrome",
+                "Amount": 2,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":25,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":26,
+                "ComputerType":"Chrome",
+                "Amount": 2,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":27,
+                "ComputerType":"Mac",
+                "Amount": 3,
+                "Abitti": false
+            },
+            {
+                "RoomNumber":28,
+                "ComputerType":"PC",
+                "Amount": 5,
+                "Abitti": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,234 @@
+*, html, body {
+    font-family: 'Segoe UI';
+}
+
+.PC {
+    background-color: green;
+    border: 1px solid black;
+}
+
+.Mac {
+    background-color: red;
+    border: 1px solid black;
+}
+
+.Chrome {
+    background-color: violet;
+    border: 1px solid black;
+}
+
+.solarTable {
+    text-align: center;
+    border: 3px solid #F9DEC9;
+    border-collapse: collapse;
+    color: black;
+}
+
+.solarTable tbody tr th {
+    text-align: left;
+}
+
+.solarTable tbody tr td {
+    text-align: left;
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    padding: 5px;
+    margin: 5px;
+    width: 150px;
+}
+
+.computerTable {
+    border: 1px solid #F9DEC9;
+    border-collapse: collapse;
+    text-align: center;
+    background-color: #3A405A;
+}
+
+.computerTable tbody tr td {
+    width: 100px;
+    height: 75px;
+}
+
+.comOp {
+    text-align: center;
+}
+
+.comOp div {
+    display: inline-flex;
+    flex-wrap: nowrap;
+}
+
+.comOp button {
+    background-color: white;
+    font-size: 20px;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 10px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.comOp button:hover {
+    background-color: #3A405A
+}
+
+.comOp button:disabled {
+    background-color: rgb(187, 187, 187);
+}
+
+.comOp button:disabled:hover {
+    background-color: rgb(187, 187, 187);
+    cursor: default;
+}
+
+.solar {
+    text-align: center;
+}
+
+.main {
+    height: 100%;
+}
+
+.megaMenu {
+    display: none;
+    float: left;
+    position: absolute;
+    width: 98.9vw;
+    left: 0;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: 0.1vw solid #F9DEC9;
+    border-radius: 25px;
+}
+
+.megaMenu p {
+    display: inline;
+    padding: 10px;
+}
+
+.link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    user-select: none;
+}
+
+.header {
+    color: #F9DEC9;
+    font-size: 25px;
+    padding-top: 25px;
+}
+
+.info {
+    display: inline;
+    padding: 5px;
+}
+
+.info:hover {
+    background-color: #99B2DD;
+}
+
+.info:hover .megaMenu {
+    display: block;
+    background-color: #99B2DD
+}
+
+body {
+    height: 100%;
+    background: #3A405A;
+    text-align: center;
+}
+
+.contentBox {
+    background-color: #99B2DD;
+    border-radius: 25px;
+    border: 5px solid #F9DEC9;
+    margin: 50px;
+}
+
+.footer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 1px solid #99B2DD;
+    width: 95%;
+}
+
+.linkCollection {
+    padding: 10px;
+    color: #F9DEC9;
+}
+
+.linkCollection p {
+    margin: 0px;
+    padding: 1px;
+}
+
+.languageMenu {
+    color: #F9DEC9;
+    right: 50px;
+    position: absolute;
+}
+.login{
+    display: inline-flex;
+    color: #F9DEC9;
+}
+.login form{
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 5px 5px 5px 5px #99B2DD;
+    border-radius: 10px;
+    font-size: 15px;
+}
+.login form input{
+    border: 1px solid #99B2DD;
+    background-color: #3A405A;
+    border-radius: 10px;
+    color: #F9DEC9;
+    padding: 5px;
+    margin: 5px;
+}
+@media only screen and (max-width: 750px) {
+    .computerTable tbody tr td {
+        width: 75px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width: 615px) {
+    .computerTable tbody tr td {
+        width: 50px;
+        height: 25px;
+    }
+    .solarTable {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 515px) {
+    .computerTable tbody tr td {
+        width: 35px;
+        height: 10px;
+    }
+    .solarTable {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .computerTable tbody tr td {
+        font-size: 75%;
+    }
+    .contentBox {
+        margin: 5px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .solarTable {
+        font-size: 8px;
+    }
+    .languageMenu {
+        right: unset;
+    }
+}
