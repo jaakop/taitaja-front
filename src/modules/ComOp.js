@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Button from '@material-ui/core/Button';
+
 import ComputerData from '../content/Computers.json';
 
 class ComOp extends React.Component {
@@ -17,13 +19,15 @@ class ComOp extends React.Component {
     render() {
         let leftDisable = false;
         let rightDisable = false;
-        let changeButton = <button onClick={(e) => this.setState({ optimized: true })}>Optimoi</button>;
+        let changeButton = <Button color='primary'size='large' variant='contained' onClick={(e) => this.setState({ optimized: true })}>Optimoi</Button>;
+
         if (this.state.floor === 1)
             leftDisable = true;
         if (this.state.floor === 2)
             rightDisable = true
         if (this.state.optimized)
-            changeButton = <button onClick={(e) => this.setState({ optimized: false })}>Palauta</button>
+            changeButton = <Button color='primary' variant='contained' size='large' onClick={(e) => this.setState({ optimized: false })}>Palauta</Button>
+        
         return (
             <div className='comOp contentBox'>
                 <h2>Luokkien tietokoneet</h2>

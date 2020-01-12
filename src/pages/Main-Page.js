@@ -9,7 +9,6 @@ import Footer from '../modules/Footer';
 
 import endPoints from '../config/endPoints.json';
 
-import './styles/mainStyle.css';
 import { removeTypeDuplicates } from '@babel/types';
 
 class MainPage extends React.Component {

@@ -1,5 +1,16 @@
 import React from 'react';
 
+import { withStyles } from '@material-ui/core/styles';
+
+import Container from '@material-ui/core/Container';
+import Paper from '@material-ui/core/Paper';
+import Table from '@material-ui/core/Table';
+import TableBody from '@material-ui/core/TableBody';
+import TableCell from '@material-ui/core/TableCell';
+import TableContainer from '@material-ui/core/TableContainer';
+import TableHead from '@material-ui/core/TableHead';
+import TableRow from '@material-ui/core/TableRow';
+
 import GetSolarData from '../content/SolarData';
 import Computerdata from '../content/Computers.json';
 
@@ -11,13 +22,24 @@ class Solar extends React.Component {
             panels: []
         }
 
-        this.GetData = this.GetData.bind(this);
+        this.GeStyledTableCellata = this.GeStyledTableCellata.bind(this);
 
-        this.GetData();
+        this.GeStyledTableCellata();
     }
     render() {
-        let panels = this.state.panels;
+        const StyledTableCell = withStyles(theme => ({
+            head: {
+                backgroundColor: theme.palette.primary.dark,
+                color: theme.palette.primary.contrastText,
+            },  
+            body: {
+                backgroundColor: theme.palette.secondary.dark,
+                color: theme.palette.secondary.contrastText,
+            }
+        }))(TableCell);
 
+
+        let panels = this.state.panels;
         let solarTable = [];
 
         if (panels.length > 0) {
@@ -36,39 +58,45 @@ class Solar extends React.Component {
                     solarCapacity = Math.round((powerAMount / computerUsage) * 100);
                     gridCapacity = 100 - solarCapacity;
                 }
-                solarTable.push(<table className='solarTable' align='center'>
-                    <tbody>
-                        <tr>
-                            <th colSpan={5}>Päivämäärä {panels[0].getElementsByTagName('pvm_' + day)[0].innerHTML}, paistetta keskimäärin {shineAmount} tuntia/paneeli</th>
-                        </tr>
-                        <tr>
-                            <td>Paneelit 1-{panels.length}</td>
-                            <td>Tuotanto kWh</td>
-                            <td>Tietokoneiden  kulutus kWh</td>
-                            <td>Aurinkovoiman kattama %-osuus</td>
-                            <td>Verkkovirran %-osuus</td>
-                        </tr>
-                        <tr>
-                            <td>Yhteensä</td>
-                            <td>{powerAMount}</td>
-                            <td>{computerUsage}</td>
-                            <td>{solarCapacity}</td>
-                            <td>{gridCapacity}</td>
-                        </tr>
-                    </tbody>
-                </table>);
+                solarTable.push(
+                    <TableContainer component={Paper}>
+                        <Table>
+                            <TableHead>
+                                <TableRow>
+                                    <StyledTableCell colSpan={5}>Päivämäärä {panels[0].getElementsByTagName('pvm_' + day)[0].innerHTML}, paistetta keskimäärin {shineAmount} tuntia/paneeli</StyledTableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                <TableRow>
+                                    <StyledTableCell>Paneelit 1-{panels.length}</StyledTableCell>
+                                    <StyledTableCell>Tuotanto kWh</StyledTableCell>
+                                    <StyledTableCell>Tietokoneiden  kulutus kWh</StyledTableCell>
+                                    <StyledTableCell>Aurinkovoiman kattama %-osuus</StyledTableCell>
+                                    <StyledTableCell>Verkkovirran %-osuus</StyledTableCell>
+                                </TableRow>
+                                <TableRow>
+                                    <StyledTableCell>Yhteensä</StyledTableCell>
+                                    <StyledTableCell>{powerAMount}</StyledTableCell>
+                                    <StyledTableCell>{computerUsage}</StyledTableCell>
+                                    <StyledTableCell>{solarCapacity}</StyledTableCell>
+                                    <StyledTableCell>{gridCapacity}</StyledTableCell>
+                                </TableRow>
+                            </TableBody>
+                        </Table>
+                    </TableContainer>);
             }
         }
         return (
-            <div className='solar contentBox'>
+            <Container fixed color='secondary'>
                 <h2>Aurinkopaneelien tuotanto</h2>
-                <div>
-                {solarTable}
-                </div>
-            </div>
+                <Container>
+                    {solarTable}
+                </Container>
+            </Container>
+
         );
     }
-    async GetData() {
+    async GeStyledTableCellata() {
         let data = await GetSolarData();
         this.setState({ panels: data.getElementsByTagName('paneeli') });
     }

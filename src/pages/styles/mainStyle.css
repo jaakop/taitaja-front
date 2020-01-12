@@ -58,30 +58,6 @@
     display: inline-flex;
     flex-wrap: nowrap;
 }
-
-.comOp button {
-    background-color: white;
-    font-size: 20px;
-    border-radius: 5px;
-    box-shadow: none;
-    padding: 10px;
-    user-select: none;
-    cursor: pointer;
-}
-
-.comOp button:hover {
-    background-color: #3A405A
-}
-
-.comOp button:disabled {
-    background-color: rgb(187, 187, 187);
-}
-
-.comOp button:disabled:hover {
-    background-color: rgb(187, 187, 187);
-    cursor: default;
-}
-
 .solar {
     text-align: center;
 }
