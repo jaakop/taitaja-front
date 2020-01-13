@@ -4,17 +4,17 @@
 
 .PC {
     background-color: green;
-    border: 1px solid black;
+    border: 1px solid black !important;
 }
 
 .Mac {
     background-color: red;
-    border: 1px solid black;
+    border: 1px solid black !important;
 }
 
 .Chrome {
     background-color: violet;
-    border: 1px solid black;
+    border: 1px solid black !important;
 }
 
 .solarTable {
@@ -28,7 +28,7 @@
     text-align: left;
 }
 
-.solarTable tbody tr td {
+.solarTable tbody tr  {
     text-align: left;
     border: 1px solid black;
     border-collapse: collapse;
@@ -189,8 +189,26 @@ body {
 .roundBottomLeft{
     border-bottom-left-radius: 10px;
 }
+.comOpRow td{
+    border:none;
+}
+.content{
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
 @media only screen and (max-width: 340px) {
     .languageMenu {
         right: unset;
+    }
+    .content h2{
+        font-size: 125%;
+    }
+    .content{
+        margin-left: 25px;
+        margin-right: 25px;
     }
 }

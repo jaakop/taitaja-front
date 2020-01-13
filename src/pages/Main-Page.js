@@ -49,10 +49,10 @@ class MainPage extends React.Component {
 
                     </div>
                     <div>
-                        <Box display='block' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25} style={{marginLeft: 50, marginRight: 50, marginTop: 10, marginBottom:10, paddingBottom: 20, paddingTop: 20}}>
+                        <Box display='block' className='content' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25}>
                             <Solar></Solar>
                         </Box>
-                        <Box display='block' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25} style={{marginLeft: 50, marginRight: 50, marginTop: 10, marginBottom:10, paddingBottom: 20, paddingTop: 20}}>
+                        <Box display='block' className='content' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25}>
                             <ComOp></ComOp>
                         </Box>
                     </div>

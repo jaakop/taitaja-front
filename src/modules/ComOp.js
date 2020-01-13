@@ -10,6 +10,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
 import ComputerData from '../content/Computers.json';
+import { Container, Grid } from '@material-ui/core';
 
 class ComOp extends React.Component {
     constructor(props) {
@@ -36,20 +37,20 @@ class ComOp extends React.Component {
             changeButton = <Button color='primary' variant='contained' size='large' onClick={(e) => this.setState({ optimized: false })}>Palauta</Button>
         
         return (
-            <div className='comOp marginBottom'>
+            <Container fixed className='marginBottom'>
                 <h2>Luokkien tietokoneet</h2>
-                <div>
+                <Grid container direction='row' spacing={3} alignItems='center' justify='center'>
                     <Button color='primary' variant='contained' size='large' onClick={(e) => this.UpdateFloor(e, -1)} disabled={leftDisable}>{'<'}</Button>
-                    <TableContainer style={{overflowY:'hidden'}} component={Paper}>
+                    <TableContainer style={{overflowY:'hidden', maxWidth: 500}} component={Paper} align='center'>
                         <Table>
                             {this.RenderAFloor(this.state.floor)}
                         </Table>
                     </TableContainer>
                     <Button color='primary' variant='contained' size='large' onClick={(e) => this.UpdateFloor(e, 1)} disabled={rightDisable}>{'>'}</Button>
-                </div>
+                </Grid>
                 <br/>
                 {changeButton}
-            </div>
+            </Container>
         );
     }
     UpdateFloor(event, number) {
@@ -71,25 +72,25 @@ class ComOp extends React.Component {
     RenderAFloor(floorNumber) {
         let render = [];
         if (floorNumber === 1) {
-            render.push(<TableRow>
+            render.push(<TableRow className='comOpRow'>
                         <TableCell align='center' className={this.GetRoomByNumber(15).ComputerType} rowSpan={2}>15 <br/> {this.GetRoomByNumber(15).ComputerType}<br/>{this.GetRoomByNumber(15).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(14).ComputerType}>14 <br/> {this.GetRoomByNumber(14).ComputerType}<br/>{this.GetRoomByNumber(14).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(13).ComputerType}>13 <br/> {this.GetRoomByNumber(13).ComputerType}<br/>{this.GetRoomByNumber(13).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(12).ComputerType}>12 <br/> {this.GetRoomByNumber(12).ComputerType}<br/>{this.GetRoomByNumber(12).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(11).ComputerType}>11 <br/> {this.GetRoomByNumber(11).ComputerType}<br/>{this.GetRoomByNumber(11).Amount} kpl</TableCell>
                     </TableRow>) 
-                    render.push(<TableRow displayBorder={false}>
+                    render.push(<TableRow className='comOpRow'>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell></TableRow>)
-                    render.push(<TableRow displayBorder={false}>
+                    render.push(<TableRow className='comOpRow'>
                         <TableCell align='center' className={this.GetRoomByNumber(16).ComputerType} rowSpan={2}>16 <br/> {this.GetRoomByNumber(16).ComputerType}<br/>{this.GetRoomByNumber(16).Amount} kpl</TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell></TableRow>)
-                    render.push(<TableRow>
+                    render.push(<TableRow className='comOpRow'>
                         <TableCell align='center' className={this.GetRoomByNumber(17).ComputerType}>17 <br/> {this.GetRoomByNumber(17).ComputerType}<br/>{this.GetRoomByNumber(17).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(18).ComputerType}>18 <br/> {this.GetRoomByNumber(18).ComputerType}<br/>{this.GetRoomByNumber(18).Amount} kpl</TableCell>
                         <TableCell></TableCell>
@@ -98,25 +99,25 @@ class ComOp extends React.Component {
         }
         else if (floorNumber === 2) {
             render.push(
-                    <TableRow>
+                    <TableRow className='comOpRow'>
                         <TableCell align='center' className={this.GetRoomByNumber(25).ComputerType} rowSpan={2}>25 <br/> {this.GetRoomByNumber(25).ComputerType}<br/>{this.GetRoomByNumber(25).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(24).ComputerType}>24 <br/> {this.GetRoomByNumber(24).ComputerType}<br/>{this.GetRoomByNumber(24).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(23).ComputerType}>23 <br/> {this.GetRoomByNumber(23).ComputerType}<br/>{this.GetRoomByNumber(23).Amount} kpl</TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                     </TableRow>)
-                    render.push(<TableRow>
+                    render.push(<TableRow className='comOpRow'>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell></TableRow>)
-                    render.push(<TableRow>
+                    render.push(<TableRow className='comOpRow'>
                         <TableCell align='center' className={this.GetRoomByNumber(26).ComputerType} rowSpan={2}>26 <br/> {this.GetRoomByNumber(26).ComputerType}<br/>{this.GetRoomByNumber(26).Amount} kpl</TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell>
                         <TableCell></TableCell></TableRow>)
-                    render.push(<TableRow>
+                    render.push(<TableRow className='comOpRow'>
                         <TableCell align='center' className={this.GetRoomByNumber(27).ComputerType}>27 <br/> {this.GetRoomByNumber(27).ComputerType}<br/>{this.GetRoomByNumber(27).Amount} kpl</TableCell>
                         <TableCell align='center' className={this.GetRoomByNumber(28).ComputerType}>28 <br/> {this.GetRoomByNumber(28).ComputerType}<br/>{this.GetRoomByNumber(28).Amount} kpl</TableCell>
                         <TableCell></TableCell>
