@@ -38,18 +38,6 @@
     width: 150px;
 }
 
-.computerTable {
-    border: 1px solid #F9DEC9;
-    border-collapse: collapse;
-    text-align: center;
-    background-color: #3A405A;
-}
-
-.computerTable tbody tr td {
-    width: 100px;
-    height: 75px;
-}
-
 .comOp {
     text-align: center;
 }
@@ -164,46 +152,44 @@ body {
     padding: 5px;
     margin: 5px;
 }
-@media only screen and (max-width: 750px) {
-    .computerTable tbody tr td {
-        width: 75px;
-        height: 50px;
-    }
+.marginTop{
+    margin-top: 5px;
+}
+.marginBottom{
+    margin-bottom: 5px;
+}
+.marginLeft{
+    margin-left: 5px;
+}
+.marginRight{
+    margin-right: 5px;
+}
+.paddingTop{
+    padding-top: 5px;
+}
+.paddingBottom{
+    padding-bottom: 5px;
+}
+.paddingLeft{
+    padding-left: 5px;
+}
+.paddingRight{
+    padding-right: 5px;
 }
 
-@media only screen and (max-width: 615px) {
-    .computerTable tbody tr td {
-        width: 50px;
-        height: 25px;
-    }
-    .solarTable {
-        font-size: 13px;
-    }
+.roundTopRight{
+    border-top-right-radius: 10px;
 }
-
-@media only screen and (max-width: 515px) {
-    .computerTable tbody tr td {
-        width: 35px;
-        height: 10px;
-    }
-    .solarTable {
-        font-size: 10px;
-    }
+.roundTopLeft{
+    border-top-left-radius: 10px;
 }
-
-@media only screen and (max-width: 450px) {
-    .computerTable tbody tr td {
-        font-size: 75%;
-    }
-    .contentBox {
-        margin: 5px;
-    }
+.roundBottomRight{
+    border-bottom-right-radius: 10px;
 }
-
+.roundBottomLeft{
+    border-bottom-left-radius: 10px;
+}
 @media only screen and (max-width: 340px) {
-    .solarTable {
-        font-size: 8px;
-    }
     .languageMenu {
         right: unset;
     }

@@ -7,6 +7,8 @@ import Solar from '../modules/Solar';
 import ComOp from '../modules/ComOp';
 import Footer from '../modules/Footer';
 
+import Box from '@material-ui/core/Box';
+
 import endPoints from '../config/endPoints.json';
 
 import { removeTypeDuplicates } from '@babel/types';
@@ -47,8 +49,12 @@ class MainPage extends React.Component {
 
                     </div>
                     <div>
-                        <Solar></Solar>
-                        <ComOp></ComOp>
+                        <Box display='block' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25} style={{marginLeft: 50, marginRight: 50, marginTop: 10, marginBottom:10, paddingBottom: 20, paddingTop: 20}}>
+                            <Solar></Solar>
+                        </Box>
+                        <Box display='block' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25} style={{marginLeft: 50, marginRight: 50, marginTop: 10, marginBottom:10, paddingBottom: 20, paddingTop: 20}}>
+                            <ComOp></ComOp>
+                        </Box>
                     </div>
                     <Footer></Footer>
                 </div>

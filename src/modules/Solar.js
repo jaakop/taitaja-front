@@ -2,6 +2,7 @@ import React from 'react';
 
 import { withStyles } from '@material-ui/core/styles';
 
+import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Paper from '@material-ui/core/Paper';
 import Table from '@material-ui/core/Table';
@@ -29,15 +30,14 @@ class Solar extends React.Component {
     render() {
         const StyledTableCell = withStyles(theme => ({
             head: {
-                backgroundColor: theme.palette.primary.dark,
+                backgroundColor: theme.palette.primary.main,
                 color: theme.palette.primary.contrastText,
             },  
             body: {
-                backgroundColor: theme.palette.secondary.dark,
-                color: theme.palette.secondary.contrastText,
+                backgroundColor: theme.palette.primary.main,
+                color: theme.palette.primary.contrastText,
             }
         }))(TableCell);
-
 
         let panels = this.state.panels;
         let solarTable = [];
@@ -59,7 +59,7 @@ class Solar extends React.Component {
                     gridCapacity = 100 - solarCapacity;
                 }
                 solarTable.push(
-                    <TableContainer component={Paper}>
+                    <TableContainer component={Paper} className='marginTop marginBottom'>
                         <Table>
                             <TableHead>
                                 <TableRow>
@@ -87,8 +87,8 @@ class Solar extends React.Component {
             }
         }
         return (
-            <Container fixed color='secondary'>
-                <h2>Aurinkopaneelien tuotanto</h2>
+            <Container fixed>
+                <Box color='primary.contrastText' component='h2' bgcolor='primary.main' display='inline' className='paddingTop paddingBottom paddingLeft paddingRight roundTopRight roundTopLeft'>Aurinkopaneelien tuotanto</Box>
                 <Container>
                     {solarTable}
                 </Container>
