@@ -38,18 +38,20 @@ class ComOp extends React.Component {
         
         return (
             <Container fixed className='marginBottom'>
+            <Grid container direction='column' spacing={4} alignItems='center' justify='center'>
                 <h2>Luokkien tietokoneet</h2>
-                <Grid container direction='row' spacing={3} alignItems='center' justify='center'>
-                    <Button color='primary' variant='contained' size='large' onClick={(e) => this.UpdateFloor(e, -1)} disabled={leftDisable}>{'<'}</Button>
                     <TableContainer style={{overflowY:'hidden', maxWidth: 500}} component={Paper} align='center'>
                         <Table>
                             {this.RenderAFloor(this.state.floor)}
                         </Table>
                     </TableContainer>
-                    <Button color='primary' variant='contained' size='large' onClick={(e) => this.UpdateFloor(e, 1)} disabled={rightDisable}>{'>'}</Button>
+                <Grid container direction='row' spacing={3} alignItems='center' justify='center' style={{marginTop: 15}}>
+                    <Button style={{width:'100%', maxWidth:250}} color='primary' variant='contained' size='large' onClick={(e) => this.UpdateFloor(e, -1)} disabled={leftDisable}>{'<'}</Button>
+                    <Button style={{width:'100%', maxWidth:250}} color='primary' variant='contained' size='large' onClick={(e) => this.UpdateFloor(e, 1)} disabled={rightDisable}>{'>'}</Button>
                 </Grid>
                 <br/>
                 {changeButton}
+                </Grid>
             </Container>
         );
     }
