@@ -63,7 +63,7 @@ class Solar extends React.Component {
                         <Table>
                             <TableHead>
                                 <TableRow>
-                                    <StyledTableCell colSpan={5}>Päivämäärä {panels[0].getElementsByTagName('pvm_' + day)[0].innerHTML}, paistetta keskimäärin {shineAmount} tuntia/paneeli</StyledTableCell>
+                                    <StyledTableCell style={{maxWidth:'100%'}} colSpan={5}>Päivämäärä {panels[0].getElementsByTagName('pvm_' + day)[0].innerHTML}, paistetta keskimäärin {shineAmount} tuntia/paneeli</StyledTableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -88,7 +88,7 @@ class Solar extends React.Component {
         }
         return (
             <Container fixed>
-                <Box color='primary.contrastText' component='h2' bgcolor='primary.main' display='inline' className='paddingTop paddingBottom paddingLeft paddingRight roundTopRight roundTopLeft'>Aurinkopaneelien tuotanto</Box>
+                <Box color='primary.contrastText' component='h2' display='inline' className='paddingTop paddingBottom paddingLeft paddingRight'>Aurinkopaneelien tuotanto</Box>
                 <Container>
                     {solarTable}
                 </Container>

@@ -8,6 +8,8 @@ import ComOp from '../modules/ComOp';
 import Footer from '../modules/Footer';
 
 import Box from '@material-ui/core/Box';
+import Paper from '@material-ui/core/Paper';
+import {styled} from '@material-ui/styles';
 
 import endPoints from '../config/endPoints.json';
 
@@ -26,6 +28,9 @@ class MainPage extends React.Component {
         this.CheckCookie();
     }
     render() {
+        const StyledPaper = styled(Paper)`
+            background-color: ${props => this.props.theme.palette.secondary.main}
+        `;
         let loginRedirect;
         if (this.state.loginRedirect)
             loginRedirect = <Redirect to='/login'></Redirect>
@@ -49,12 +54,12 @@ class MainPage extends React.Component {
 
                     </div>
                     <div>
-                        <Box display='block' className='content' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25}>
+                        <StyledPaper component={Box} display='block' className='content' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25}>
                             <Solar></Solar>
-                        </Box>
-                        <Box display='block' className='content' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25}>
+                        </StyledPaper>
+                        <StyledPaper component={Box} display='block' className='content' bgcolor='secondary.main' border={5} borderColor='secondary.contrastText' borderRadius={25}>
                             <ComOp></ComOp>
-                        </Box>
+                        </StyledPaper>
                     </div>
                     <Footer></Footer>
                 </div>

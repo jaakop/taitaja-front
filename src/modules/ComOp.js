@@ -10,7 +10,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 
 import ComputerData from '../content/Computers.json';
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid, Box } from '@material-ui/core';
 
 class ComOp extends React.Component {
     constructor(props) {
@@ -39,10 +39,12 @@ class ComOp extends React.Component {
         return (
             <Container fixed className='marginBottom'>
             <Grid container direction='column' spacing={4} alignItems='center' justify='center'>
-                <h2>Luokkien tietokoneet</h2>
-                    <TableContainer style={{overflowY:'hidden', maxWidth: 500}} component={Paper} align='center'>
+                <Box color='primary.contrastText' component='h2' display='inline' className='paddingTop paddingBottom paddingLeft paddingRight'>Luokkien tietokoneet</Box>
+                    <TableContainer style={{overflowY:'hidden', maxWidth: 500}} component={Paper} align='center' elevation={3}>
                         <Table>
-                            {this.RenderAFloor(this.state.floor)}
+                            <TableBody>
+                                {this.RenderAFloor(this.state.floor)}
+                            </TableBody>
                         </Table>
                     </TableContainer>
                 <Grid container direction='row' spacing={3} alignItems='center' justify='center' style={{marginTop: 15}}>
